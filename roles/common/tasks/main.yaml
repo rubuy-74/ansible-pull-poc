@@ -1,0 +1,14 @@
+---
+- name: Install a useful utility package
+  ansible.builtin.package:
+    name: tree # or another simple tool like htop
+    state: present
+  become: true
+
+- name: Create a proof-of-concept file with a timestamp
+  ansible.builtin.copy:
+    content: "POC was successfully run at {{ ansible_date_time.iso8601 }}"
+    dest: /tmp/ansible_poc_success.txt
+    owner: root
+    group: root
+    mode: '0644'
