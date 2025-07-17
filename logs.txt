@@ -1,0 +1,88 @@
+20532369606b | CHANGED => {
+    "after": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "before": "a3d2514ce4cbac19609a4d1fc5a59663f8601837",
+    "changed": true,
+    "remote_url_changed": false
+}
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [20532369606b]
+
+TASK [common : Install a useful utility package] *******************************
+ok: [20532369606b]
+
+TASK [common : Create a proof-of-concept file with a timestamp] ****************
+changed: [20532369606b]
+
+PLAY RECAP *********************************************************************
+20532369606b               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+Starting Ansible Pull at 2025-07-17 11:25:01
+/usr/bin/ansible-pull -U git@github.com:rubuy-74/ansible-pull-poc.git --private-key /run/secrets/git_ssh_key -i 20532369606b, --only-if-changed --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml
+20532369606b | SUCCESS => {
+    "after": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "before": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "changed": false,
+    "remote_url_changed": false
+}
+Starting Ansible Pull at 2025-07-17 11:26:01
+/usr/bin/ansible-pull -U git@github.com:rubuy-74/ansible-pull-poc.git --private-key /run/secrets/git_ssh_key -i 20532369606b, --only-if-changed --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml
+Repository has not changed, quitting.
+20532369606b | SUCCESS => {
+    "after": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "before": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "changed": false,
+    "remote_url_changed": false
+}
+Starting Ansible Pull at 2025-07-17 11:27:01
+/usr/bin/ansible-pull -U git@github.com:rubuy-74/ansible-pull-poc.git --private-key /run/secrets/git_ssh_key -i 20532369606b, --only-if-changed --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml
+Repository has not changed, quitting.
+20532369606b | SUCCESS => {
+    "after": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "before": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "changed": false,
+    "remote_url_changed": false
+}
+Starting Ansible Pull at 2025-07-17 11:28:01
+/usr/bin/ansible-pull -U git@github.com:rubuy-74/ansible-pull-poc.git --private-key /run/secrets/git_ssh_key -i 20532369606b, --only-if-changed --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml
+Repository has not changed, quitting.
+20532369606b | CHANGED => {
+    "after": "c5f4278d27b31cd82f7204480f81e906db131a97",
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "before": "5a0f12b5fed4aaf7687d21f43c766a15b486f8c7",
+    "changed": true,
+    "remote_url_changed": false
+}
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [20532369606b]
+
+TASK [common : Install a useful utility package] *******************************
+ok: [20532369606b]
+
+TASK [common : Create a proof-of-concept file with a timestamp] ****************
+changed: [20532369606b]
+
+PLAY RECAP *********************************************************************
+20532369606b               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+Starting Ansible Pull at 2025-07-17 11:29:01
+/usr/bin/ansible-pull -U git@github.com:rubuy-74/ansible-pull-poc.git --private-key /run/secrets/git_ssh_key -i 20532369606b, --only-if-changed --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml
