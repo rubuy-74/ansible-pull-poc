@@ -41,7 +41,7 @@ WORKDIR /home/ansible
 # Perform an initial ansible-pull using the securely mounted secret
 # The --mount flag is enabled by the #syntax line at the top of the file
 RUN --mount=type=secret,id=git_ssh_key,uid=1000,gid=1000 \
-    ansible-pull -U ${REPO_URL} --private-key /run/secrets/git_ssh_key -i "$(hostname)," --directory /home/ansible/ansible_checkout
+    ansible-pull -U ${REPO_URL} --private-key /run/secrets/git_ssh_key -i "$(hostname)," --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml
 
 # 6. Switch back to the 'root' user to set up system-level services (cron)
 USER root

@@ -1,8 +1,0 @@
----
-- name: Ansible Pull POC
-  hosts: localhost
-  connection: local
-  tasks:
-    - name: Print a success message
-      ansible.builtin.debug:
-        msg: "Ansible playbook ran successfully from the git repository!"
