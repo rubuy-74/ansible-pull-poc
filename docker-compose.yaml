@@ -4,11 +4,13 @@ version: '3.9'
 services:
   ansible-client:
     build:
-      context:.
+      context: .
       dockerfile: Dockerfile
       args:
         # Replace this with the SSH URL of your private Git repository
-        REPO_URL: "git@github.com:your-username/ansible-pull-poc.git"
+        REPO_URL: "git@github.com:rubuy-74/ansible-pull-poc.git"
+      secrets:
+        - git_ssh_key
     container_name: ansible-pull-poc-container
     secrets:
       - git_ssh_key
@@ -19,4 +21,4 @@ services:
 # Docker Compose will mount the content of 'private_key' file into the container at /run/secrets/git_ssh_key
 secrets:
   git_ssh_key:
-    file:./private_key
+    file: ./private_key
