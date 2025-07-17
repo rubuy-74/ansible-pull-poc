@@ -49,7 +49,7 @@ USER root
 # Set up the cron job to use the runtime secret
 RUN touch /var/log/ansible-pull.log && chown ansible:ansible /var/log/ansible-pull.log
 # MODIFIED: The cron job now points to the secret file mounted by Docker Compose at runtime
-RUN echo "*/1 * * * * ansible /usr/bin/ansible-pull -U ${REPO_URL} --private-key /run/secrets/git_ssh_key -i \"\$(hostname),\" --only-if-changed --directory /home/ansible/ansible_checkout >> /var/log/ansible-pull.log 2>&1" > /etc/cron.d/ansible-pull-cron
+RUN echo "*/1 * * * * ansible /usr/bin/ansible-pull -U ${REPO_URL} --private-key /run/secrets/git_ssh_key -i \"\$(hostname),\" --only-if-changed --directory /home/ansible/ansible_checkout /home/ansible/ansible_checkout/local.yaml >> /var/log/ansible-pull.log 2>&1" > /etc/cron.d/ansible-pull-cron
 RUN chmod 0644 /etc/cron.d/ansible-pull-cron
 
 # 7. Set the final command to run cron and tail the log file
