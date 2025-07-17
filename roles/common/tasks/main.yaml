@@ -7,7 +7,7 @@
 
 - name: Create a proof-of-concept file with a timestamp
   ansible.builtin.copy:
-    content: "New POC was successfully run at {{ ansible_date_time.iso8601 }}"
+    content: "POC was successfully run at {{ ansible_date_time.iso8601 }}"
     dest: /tmp/ansible_poc_success.txt
     owner: root
     group: root
